@@ -213,8 +213,18 @@ $(document).ready(function () {
 
   /********************** RSVP **********************/
   $("#rsvp-form").on("submit", function (e) {
+    function getFormData($form){
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+    
+        $.map(unindexed_array, function(n, i){
+            indexed_array[n['name']] = n['value'];
+        });
+    
+        return indexed_array;
+    }
     e.preventDefault();
-    var data = $(this).serialize();
+    var data = getFormData($(this));
 
     $("#alert-wrapper").html(
       alert_markup(
@@ -222,22 +232,25 @@ $(document).ready(function () {
         "<strong>Just a sec!</strong> We are saving your details."
       )
     );
+    fetch(
+      "https://script.google.com/macros/s/AKfycbygkPVCpcT9EqHlBpTSQDbmcJlt_f7LYnL2Dc6jxfD3sRVUQPrN_4sCmzFGCWtqB-pMnQ/exec",
+      {
+        method: "POST",
+        body: JSON.stringify(data),
 
-    $.post(
-      "https://script.google.com/macros/s/AKfycby3Tzh9CFakrFfdJmmzHRb5dxjqIIhmcIVOmxB8DDtGPdrwdQZ6/exec",
-      data
+      }
     )
-      .done(function (data) {
-        console.log(data);
-        if (data.result === "error") {
-          $("#alert-wrapper").html(alert_markup("danger", data.message));
+      .then((response) => {
+        console.log(response);
+        if (response.result === "error") {
+          $("#alert-wrapper").html(alert_markup("danger", response.message));
         } else {
           $("#alert-wrapper").html("");
           $("#rsvp-modal").modal("show");
         }
       })
-      .fail(function (data) {
-        console.log(data);
+      .catch((err) => {
+        console.log(err);
         $("#alert-wrapper").html(
           alert_markup(
             "danger",
