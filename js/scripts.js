@@ -224,7 +224,7 @@ $(document).ready(function () {
     );
 
     $.post(
-      "https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec",
+      "https://script.google.com/macros/s/AKfycby3Tzh9CFakrFfdJmmzHRb5dxjqIIhmcIVOmxB8DDtGPdrwdQZ6/exec",
       data
     )
       .done(function (data) {
