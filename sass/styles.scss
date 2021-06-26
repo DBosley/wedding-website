@@ -180,15 +180,15 @@ Waypoinsts
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
-.bounceInLeft,
-.bounceInRight,
-.fadeInUp,
-.fadeInUpDelay,
-.fadeInDown,
-.fadeInUpD,
-.fadeInLeft,
-.fadeInRight,
-.bounceInDown {
+.animate__bounceInLeft,
+.animate__bounceInRight,
+.animate__fadeInUp,
+.animate__fadeInUpDelay,
+.animate__fadeInDown,
+.animate__fadeInUpD,
+.animate__fadeInLeft,
+.animate__fadeInRight,
+.animate__bounceInDown {
   visibility: visible;
 }
 
@@ -302,10 +302,10 @@ Hero
     margin-bottom: 80px;
   }
   .hero-content {
-    padding-top: 40%;
+    padding-top: 30%;
   }
   .hero-content img {
-    width: 30%;
+    max-width: 250px;
     margin-bottom: 10%;
   }
 }
