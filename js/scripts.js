@@ -74,6 +74,23 @@ $(document).ready(function () {
     }
   );
 
+  $(".wp10").waypoint(
+    function () {
+      $(".wp10").addClass("animate__animated  animate__fadeInLeft");
+    },
+    {
+      offset: "75%",
+    }
+  );
+  $(".wp11").waypoint(
+    function () {
+      $(".wp11").addClass("animate__animated  animate__fadeInRight");
+    },
+    {
+      offset: "75%",
+    }
+  );
+
   /***************** Initiate Flexslider ******************/
   $(".flexslider").flexslider({
     animation: "slide",
