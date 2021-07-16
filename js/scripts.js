@@ -271,7 +271,7 @@ $(document).ready(function () {
         $("#alert-wrapper").html(
           alert_markup(
             "danger",
-            "<strong>Sorry!</strong> There is some issue with the server. "
+            "<strong>Sorry!</strong> Could not submit your RSVP. Please try disabling ad blockers or privacy badger, then try again."
           )
         );
       });
