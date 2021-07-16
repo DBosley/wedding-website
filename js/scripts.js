@@ -250,7 +250,7 @@ $(document).ready(function () {
       )
     );
     fetch(
-      "https://script.google.com/macros/s/AKfycbygkPVCpcT9EqHlBpTSQDbmcJlt_f7LYnL2Dc6jxfD3sRVUQPrN_4sCmzFGCWtqB-pMnQ/exec",
+      "https://script.google.com/macros/s/AKfycby3Tzh9CFakrFfdJmmzHRb5dxjqIIhmcIVOmxB8DDtGPdrwdQZ6/exec",
       {
         method: "POST",
         body: JSON.stringify(data),
