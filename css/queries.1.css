@@ -216,10 +216,20 @@
         margin-top: 0;
     }
 
+    .links .leftcol {
+        padding: 0 15px;
+        margin-bottom: 15px;
+        border-right: none;
+    }
+
     .events .leftcol {
         padding: 0 15px;
         margin-bottom: 15px;
         border-right: none;
+    }
+
+    .links .rightcol {
+        padding: 0 20px;
     }
 
     .events .rightcol {
